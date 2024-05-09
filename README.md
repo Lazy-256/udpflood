@@ -9,7 +9,7 @@ udp amplification attack, used in server stress testing and DDOS defense testing
 ```bash
 git clone https://github.com/AH-dark/udpflood
 cd udpflood
-go build -o ../udpflood-exe
+go build -ldflags="-w -s -buildid=" -trimpath
 cd ..
 ```
 
