@@ -16,7 +16,7 @@ cd ..
 ### Run
 
 ```bash
-./udpflood -h <hostname> -p <port> -t <threads> -s <size>
+./udpflood -h <hostname> -p <port> -t <threads> -s <size> -time <time in seconds>
 ```
 
 Four parameters are supported:
